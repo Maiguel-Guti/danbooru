@@ -1,0 +1,332 @@
+{
+    "not_in_danbooru": [
+        "117920975",
+        "80850933",
+        "75273837",
+        "89230024",
+        "79308890",
+        "8412199",
+        "105089201",
+        "88464319",
+        "59394258",
+        "61552492",
+        "218835",
+        "46426165",
+        "49951423",
+        "569400",
+        "64395011",
+        "81785557",
+        "96148755",
+        "73886309",
+        "113921186",
+        "74729876",
+        "91395363",
+        "85748450",
+        "54294978",
+        "73700697"
+    ],
+    "uploaded": {
+        "78551448": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "emukami",
+            "danbooru_ids": [
+                6389636
+            ]
+        },
+        "77182430": {
+            "posts": 14,
+            "approved": 14,
+            "deleted": 0,
+            "artist": "colis",
+            "danbooru_ids": [
+                3707269,
+                3707266,
+                3707264,
+                3707262,
+                3707261,
+                3707260,
+                3707259,
+                3707257,
+                3707255,
+                3655072,
+                3655071,
+                3655070,
+                3655068,
+                3655067
+            ]
+        },
+        "48900284": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "saitou_rokuro",
+            "danbooru_ids": [
+                1936206
+            ]
+        },
+        "73820396": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "konbu_wakame",
+            "danbooru_ids": [
+                3453284
+            ]
+        },
+        "75485706": {
+            "posts": 4,
+            "approved": 4,
+            "deleted": 0,
+            "artist": "aisutabetao",
+            "danbooru_ids": [
+                3979384,
+                3976951,
+                3976893,
+                3781659
+            ]
+        },
+        "71895528": {
+            "posts": 4,
+            "approved": 4,
+            "deleted": 0,
+            "artist": "umishima_senbon",
+            "danbooru_ids": [
+                3361514,
+                3333321,
+                3333310,
+                3333309
+            ]
+        },
+        "67074066": {
+            "posts": 4,
+            "approved": 4,
+            "deleted": 0,
+            "artist": "kotomaru",
+            "danbooru_ids": [
+                3009172,
+                3009169,
+                3009162,
+                3009149
+            ]
+        },
+        "79877116": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "izumi_sai",
+            "danbooru_ids": [
+                3807661
+            ]
+        },
+        "84503824": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "seon_(seonon_)",
+            "danbooru_ids": [
+                4111708
+            ]
+        },
+        "83308225": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "hyde_(tabakko)",
+            "danbooru_ids": [
+                4022763
+            ]
+        },
+        "90958477": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "arifuji",
+            "danbooru_ids": [
+                6800636
+            ]
+        },
+        "82488019": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "j@ck",
+            "danbooru_ids": [
+                3965639
+            ]
+        },
+        "73502459": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "blazingchaos",
+            "danbooru_ids": [
+                7235229
+            ]
+        },
+        "88343022": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "yutyantogarashi",
+            "danbooru_ids": [
+                6063440
+            ]
+        },
+        "39726805": {
+            "posts": 7,
+            "approved": 7,
+            "deleted": 0,
+            "artist": "oda_takayuki",
+            "danbooru_ids": [
+                1897187,
+                1897186,
+                1897185,
+                1897184,
+                1897183,
+                1897182,
+                1897181
+            ]
+        },
+        "43451080": {
+            "posts": 1,
+            "approved": 0,
+            "deleted": 1,
+            "artist": "itsuki_(sakana-crusade)",
+            "danbooru_ids": [
+                3722586
+            ]
+        },
+        "76102319": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "j@ck",
+            "danbooru_ids": [
+                3589161
+            ]
+        },
+        "87705511": {
+            "posts": 2,
+            "approved": 2,
+            "deleted": 0,
+            "artist": "macaronk",
+            "danbooru_ids": [
+                4521175,
+                4469003
+            ]
+        },
+        "69213880": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "aisutabetao",
+            "danbooru_ids": [
+                6092459
+            ]
+        },
+        "44412940": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "ge-b",
+            "danbooru_ids": [
+                1721134
+            ]
+        },
+        "64131387": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "umapan",
+            "danbooru_ids": [
+                2916411
+            ]
+        },
+        "75830084": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "j@ck",
+            "danbooru_ids": [
+                3573271
+            ]
+        },
+        "91240225": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "umibouzu_(niito)",
+            "danbooru_ids": [
+                4638543
+            ]
+        },
+        "78052669": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "sino42",
+            "danbooru_ids": [
+                3701071
+            ]
+        },
+        "82513830": {
+            "posts": 1,
+            "approved": 1,
+            "deleted": 0,
+            "artist": "stup-jam",
+            "danbooru_ids": [
+                3967549
+            ]
+        },
+        "85514208": {
+            "posts": 40,
+            "approved": 38,
+            "deleted": 2,
+            "artist": "abara_heiki",
+            "danbooru_ids": [
+                8505904,
+                8505882,
+                8505877,
+                8505873,
+                8505482,
+                8497994,
+                8497474,
+                8497278,
+                8497277,
+                8497262,
+                8497248,
+                8497243,
+                8497241,
+                8497239,
+                8497213,
+                8497210,
+                8497195,
+                8497193,
+                8497188,
+                8497183,
+                8497179,
+                8497171,
+                8497169,
+                8496609,
+                8496604,
+                8496600,
+                8496598,
+                8496597,
+                8496590,
+                8496588,
+                8496137,
+                8496135,
+                8496131,
+                8496129,
+                8496128,
+                8496127,
+                8496125,
+                8496124,
+                8496123,
+                8496118
+            ]
+        }
+    }
+}
