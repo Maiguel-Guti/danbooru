@@ -18,24 +18,35 @@ def create_date_string(year:int, month:int, day:int, hours:int, minutes: int, se
 def filter_by_date(df: pd.DataFrame, after_date:str, before_date:str) -> pd.DataFrame:
 
     # Filters dataframe of MicroEdge browsing history export by date interval, doesn't take account for microseconds
-    '''
-    df['DateTime'] = pd.to_datetime(df['DateTime'].str[:19]) # yyyy-mm--ddThh:mm:ss
-    
-    df = df[  (df['DateTime'] >= str(after_date[0]))   &    (df['DateTime'] <= str(before_date[0]))   ]
-    filtered_df = df[(df['DateTime'].dt.time >= after_date[1]) & (df['DateTime'].dt.time <= before_date[1])]
-    
-    filtered_df.set_index('DateTime')
-    '''
-    df['DateTime'] = pd.to_datetime(df['DateTime'].str[:19])
 
-    filter_mask_between_dates = ((df['DateTime'].dt.date > after_date[0]) & (df['DateTime'].dt.date < before_date[0]))
+    df['DateTime'] = pd.to_datetime(df['DateTime'].str[:19]) # yyyy-mm-ddThh:mm:ss
+
     filter_mask_after_date =  ((df['DateTime'].dt.date == after_date[0])  & (df['DateTime'].dt.time >= after_date[1]))
-    filter_mask_before_date = ((df['DateTime'].dt.date == before_date[0]) & (df['DateTime'].dt.time <= before_date[1]))
-    filter_mask =  filter_mask_between_dates | (filter_mask_after_date & filter_mask_before_date) 
+
+    if before_date != None:
+        filter_mask_between_dates = ((df['DateTime'].dt.date > after_date[0]) & (df['DateTime'].dt.date < before_date[0]))
+        filter_mask_before_date = ((df['DateTime'].dt.date == before_date[0]) & (df['DateTime'].dt.time <= before_date[1]))
+        filter_mask = filter_mask_between_dates | (filter_mask_after_date & filter_mask_before_date) 
+    else:
+        filter_mask = filter_mask_after_date
 
     filtered_df = df[filter_mask]
 
     if filtered_df.empty: print('Date filter returned an empty dataframe')
+
+    return filtered_df
+
+def filter_by_date3(df: pd.DataFrame, after_date:str, before_date:str) -> pd.DataFrame:
+
+    df['DateTime'] = pd.to_datetime(df['DateTime'].str[:19])
+    df.set_index('DateTime') # Sets datetime as index, allows very fasts filters
+
+    print(df, "aver")
+    '''  
+    filtered_df.set_index('DateTime')
+    '''
+
+    filtered_df = df
 
     return filtered_df
 
@@ -57,11 +68,11 @@ def filter_by_danbooru_posts(df: pd.DataFrame, test: bool) -> pd.DataFrame:
     filtered_df['NavigatedToUrl'] = filtered_df['NavigatedToUrl'].str.split('?', expand=True)[0]
     filtered_df.rename(columns={'NavigatedToUrl': 'PostID'}, inplace= True)
 
-    if filtered_df.empty: print('Danbooru posts filter returned an empty dataframe')
+    if filtered_df.empty: print('No posts found in the interval given')
 
     return filtered_df
 
-def main(FILE: str, after_date, before_date, TEST: bool = True) -> None:
+def main(FILE: str, after_date, before_date, TEST: bool = True) -> list:
 
     if (after_date[0] > before_date[0]):
         raise Exception('- Error: before_date must be a date before after_date')
@@ -69,19 +80,19 @@ def main(FILE: str, after_date, before_date, TEST: bool = True) -> None:
         raise Exception('- Error: before_date time must be earlier than after_date')
 
     df: pd.DataFrame = pd.read_csv(FILE, usecols=['DateTime', 'NavigatedToUrl'])
-
+    print(after_date, before_date)
     df = filter_by_date(df, after_date, before_date)
 
     df = filter_by_danbooru_posts(df, test= TEST)
     
     print(df, '\n', df.shape[0], ' datos')
-    
-    return df
+
+    return list(df['PostID'])
 
 if __name__ == '__main__':
 
-    archivo = r'C:\Users\Usuario\Desktop\Programacion\Python\Online\danbooru_resources\historial\BrowserHistory_23_03_25.csv'
-    AFTER_DATE = create_date_string(2025, 3, 23, hours=20, minutes=50, seconds=0)
-    BEFORE_DATE = create_date_string(2025, 3, 23, hours=19, minutes=30, seconds=0)
+    archivo = r'C:\Users\Usuario\Desktop\Programacion\Python\Online\danbooru_resources\historial\BrowserHistory.csv'
+    AFTER_DATE = create_date_string(2025, 3, 24, hours=20, minutes=16, seconds=0)
+    BEFORE_DATE = create_date_string(2025, 3, 24, hours=20, minutes=18, seconds=0)
 
     main(archivo, AFTER_DATE, BEFORE_DATE, TEST= False)
