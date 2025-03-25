@@ -6,7 +6,7 @@ pd.options.mode.chained_assignment = None  # default='warn'
 '''
 Filtra el historial exportado de Microsoft edge para contener solo los resultados
 en cierto intervalo de fechas y obtener los IDs de posts de Danbooru que se 
-quieren modificar.
+quieren modificar. Prueba en nueva rama
 '''
 
 def create_date_string(year:int, month:int, day:int, hours:int, minutes: int, seconds:int = 0)-> tuple:
