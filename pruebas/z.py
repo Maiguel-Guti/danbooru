@@ -1,8 +1,26 @@
-import pandas 
-import datetime
+import json
+import requests
 
-df: pandas.DataFrame = pandas.read_csv('Historial\BrowserHistory_23_03_25.csv')
+def get_posts():
 
-df['NavigatedToUrl']
-print(datetime.date(df['DateTime'][0][:10]))
-print(df['DateTime'][0][11:19])
+    # Searches for posts with certain tags and saves in a json file
+
+    url = 'https://danbooru.donmai.us/posts.json?tags=limit:200+-taguel+panne_(fire_emblem)'
+    response = requests.get(url)
+    response_json = response.json()
+
+    with open('danbooru_response2.json', 'w') as file:
+        json.dump(response_json, file)''
+
+def get_ids():
+
+    # Opens json file and gets the ids
+
+    with open('danbooru_response2.json', 'r') as json_data:
+        jason = json.load(json_data)
+
+    ids = []
+    for index, dan_id in enumerate(jason):
+        ids.append(jason[index]['id'])
+
+    print(ids)
